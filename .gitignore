@@ -1,0 +1,26 @@
+# Ignora la carpeta de l'entorn virtual
+/venv/
+/.venv/
+
+# Ignora els fitxers de configuració sensibles
+# Aquests fitxers NO s'han de guardar en un repositori públic!
+# Si vols guardar-los de forma segura, utilitza un gestor de secrets.
+db.py # O el nom que li hagis posat al fitxer amb les credencials
+.env
+
+# Ignora els fitxers de Python
+__pycache__/
+*.pyc
+
+# Ignora els fitxers generats per Uvicorn/FastAPI
+*.sqlite3 # Si utilitzes sqlite en lloc de MariaDB, per exemple.
+.coverage
+
+# Ignora els fitxers de sistema operatiu
+.DS_Store
+.vscode/
+
+# Ignora els fitxers de dependències
+# Aquesta línia evita que s'incloguin les llibreries que tens a l'entorn virtual
+# si per alguna raó no s'inclouen a les carpetes venv.
+# pip-wheel-cache/
