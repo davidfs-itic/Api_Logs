@@ -1,0 +1,19 @@
+
+services:
+  mariadb:
+    image: mariadb:11.3.2
+    container_name: mariadb_iot
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - "3306:3306"
+    volumes:
+      - /opt/docker/mysql/data:/var/lib/mysql
+    networks:
+      - xarxa_projecte
+
+networks:
+  xarxa_projecte:
+    external: true
+    name: xarxa_IOT
